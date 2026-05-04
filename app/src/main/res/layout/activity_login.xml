@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="#E8EEF8"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="20dp"
+        android:gravity="center">
+
+        <!-- 상단 로고 섹션 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_marginTop="40dp"
+            android:layout_marginBottom="30dp">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginBottom="12dp">
+
+                <TextView
+                    android:text="🛡️"
+                    android:textSize="32sp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+                <TextView
+                    android:text="Safe"
+                    android:textSize="32sp"
+                    android:textStyle="bold"
+                    android:textColor="#F1640C"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+                <TextView
+                    android:text="Twin"
+                    android:textSize="32sp"
+                    android:textStyle="bold"
+                    android:textColor="#1565C0"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+            </LinearLayout>
+
+            <TextView
+                android:text="안전한 사업장 관리를 위한 스마트 솔루션"
+                android:textSize="14sp"
+                android:textColor="#666666"
+                android:layout_gravity="center"
+                android:layout_marginBottom="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+        </LinearLayout>
+
+        <!-- 메인 카드 -->
+        <LinearLayout
+            android:id="@+id/loginCard"
+            android:layout_width="280dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/bg_auth_card"
+            android:padding="28dp"
+            android:elevation="8dp">
+
+            <!-- 로그인 / 회원가입 탭 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="42dp"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:background="@drawable/bg_tab_container">
+
+                <TextView
+                    android:id="@+id/loginTab"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="로그인"
+                    android:textSize="13sp"
+                    android:textStyle="bold"
+                    android:textColor="#1F2A44"
+                    android:gravity="center"
+                    android:background="@drawable/bg_tab_selected" />
+
+                <TextView
+                    android:id="@+id/signupTab"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="회원가입"
+                    android:textSize="13sp"
+                    android:textColor="#8A98AD"
+                    android:gravity="center"
+                    android:clickable="true"
+                    android:focusable="true" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="이메일"
+                android:textSize="13sp"
+                android:textStyle="bold"
+                android:textColor="#344054"
+                android:layout_marginTop="28dp" />
+
+            <EditText
+                android:id="@+id/emailEditText"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/bg_input_default"
+                android:hint="example@company.com"
+                android:textColor="#1F2A44"
+                android:textColorHint="#98A2B3"
+                android:textSize="14sp"
+                android:paddingHorizontal="12dp"
+                android:inputType="textEmailAddress" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="비밀번호"
+                android:textSize="13sp"
+                android:textStyle="bold"
+                android:textColor="#344054"
+                android:layout_marginTop="18dp" />
+
+            <EditText
+                android:id="@+id/passwordEditText"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/bg_input_default"
+                android:hint="••••••••"
+                android:textColor="#1F2A44"
+                android:textColorHint="#98A2B3"
+                android:textSize="14sp"
+                android:paddingHorizontal="12dp"
+                android:inputType="textPassword" />
+
+            <Button
+                android:id="@+id/loginButton"
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:layout_marginTop="20dp"
+                android:text="로그인"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="#FFFFFF"
+                android:background="@drawable/bg_primary_button" />
+
+        </LinearLayout>
+
+        <!-- 이미 회원이신가요? -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_marginTop="24dp">
+
+            <TextView
+                android:text="아직 회원이 아니신가요? "
+                android:textColor="#666666"
+                android:textSize="14sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/signupLink"
+                android:text="지금 가입하세요"
+                android:textColor="#1565C0"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+</ScrollView>
+

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- 배경 -->
+    <item android:id="@android:id/background">
+        <shape>
+            <solid android:color="#E5EAF2" /> <!-- 연한 회색 -->
+            <corners android:radius="10dp" />
+        </shape>
+    </item>
+
+    <!-- 진행된 부분 -->
+    <item android:id="@android:id/progress">
+        <clip>
+            <shape>
+                <solid android:color="#E0521D" /> <!-- 위험 (주황/빨강 계열) -->
+                <corners android:radius="10dp" />
+            </shape>
+        </clip>
+    </item>
+
+</layer-list>

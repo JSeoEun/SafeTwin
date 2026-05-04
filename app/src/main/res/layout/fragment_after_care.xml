@@ -1,0 +1,329 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/afterCareRoot"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F3F6FB">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <!-- 상단 제목 -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="통계 &amp; 사후 관리"
+            android:textColor="#0B1736"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="안전 점수 추이 및 Before / After 비교"
+            android:textColor="#7A8AA0"
+            android:textSize="14sp"
+            android:layout_marginTop="4dp" />
+
+        <!-- Before / After 카드 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/card_bg"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="조치 Before / After 비교 · 야적장 A구역"
+                android:textColor="#0B1736"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+                android:paddingStart="12dp"
+                android:paddingEnd="12dp"
+                android:text="위험 36점 개선 · D → B+"
+                android:textColor="#008A3D"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                android:background="@drawable/bg_success_badge" />
+
+            <!-- 개선 전 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/bg_before_card"
+                android:orientation="vertical"
+                android:padding="14dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="개선 전"
+                    android:textColor="#0B1736"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="72dp"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center"
+                    android:text="현장 개선 전 사진"
+                    android:textColor="#9A7B7B"
+                    android:textSize="13sp"
+                    android:background="#E8CFCF" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:text="45 / 100점 · D등급"
+                    android:textColor="#D93025"
+                    android:textSize="22sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="✗ 보호구 미착용  ✗ 적치물 불안정  ✗ 출입통제 미비"
+                    android:textColor="#C62828"
+                    android:textSize="13sp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+            <!-- 개선 후 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="14dp"
+                android:background="@drawable/bg_after_card"
+                android:orientation="vertical"
+                android:padding="14dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="개선 후"
+                    android:textColor="#0B1736"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="72dp"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center"
+                    android:text="현장 개선 후 사진"
+                    android:textColor="#78937E"
+                    android:textSize="13sp"
+                    android:background="#CFE4D4" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:text="81 / 100점 · B+등급"
+                    android:textColor="#008A3D"
+                    android:textSize="22sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="✓ 안전모 100% 착용  ✓ 적치물 정리 완료  ✓ 통제선 설치"
+                    android:textColor="#008A3D"
+                    android:textSize="13sp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <!-- 연간 안전 점수 추이 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="18dp"
+            android:background="@drawable/card_bg"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="연간 안전 점수 추이"
+                android:textColor="#0B1736"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <!-- 간단 막대 그래프 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="170dp"
+                android:layout_marginTop="18dp"
+                android:gravity="bottom"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="80dp"
+                    android:layout_weight="1"
+                    android:layout_marginEnd="5dp"
+                    android:gravity="top|center_horizontal"
+                    android:text="62"
+                    android:textColor="#7A8AA0"
+                    android:textSize="11sp"
+                    android:background="#D8E0F2" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="92dp"
+                    android:layout_weight="1"
+                    android:layout_marginEnd="5dp"
+                    android:background="#D8E0F2" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="86dp"
+                    android:layout_weight="1"
+                    android:layout_marginEnd="5dp"
+                    android:background="#D8E0F2" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="108dp"
+                    android:layout_weight="1"
+                    android:layout_marginEnd="5dp"
+                    android:background="#D8E0F2" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="100dp"
+                    android:layout_weight="1"
+                    android:layout_marginEnd="5dp"
+                    android:background="#D8E0F2" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="92dp"
+                    android:layout_weight="1"
+                    android:layout_marginEnd="5dp"
+                    android:background="#D8E0F2" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="116dp"
+                    android:layout_weight="1"
+                    android:layout_marginEnd="5dp"
+                    android:background="#D8E0F2" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="124dp"
+                    android:layout_weight="1"
+                    android:layout_marginEnd="5dp"
+                    android:background="#D8E0F2" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="138dp"
+                    android:layout_weight="1"
+                    android:layout_marginEnd="5dp"
+                    android:background="#D8E0F2" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="130dp"
+                    android:layout_weight="1"
+                    android:layout_marginEnd="5dp"
+                    android:background="#D8E0F2" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="140dp"
+                    android:layout_weight="1"
+                    android:layout_marginEnd="5dp"
+                    android:background="#D8E0F2" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="148dp"
+                    android:layout_weight="1"
+                    android:gravity="top|center_horizontal"
+                    android:text="82"
+                    android:textColor="#1E4DCB"
+                    android:textSize="11sp"
+                    android:textStyle="bold"
+                    android:background="#6F8FE8" />
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="6월   7월   8월   9월   10월   11월   12월   1월   2월   3월   4월   5월"
+                android:textColor="#7A8AA0"
+                android:textSize="11sp"
+                android:gravity="center"
+                android:layout_marginTop="6dp" />
+
+        </LinearLayout>
+
+        <!-- 요약 카드 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="18dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:gravity="center"
+                android:text="62\n안전 최저점"
+                android:textColor="#D93025"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:background="@drawable/bg_summary_red" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+                android:text="82\n현재 점수"
+                android:textColor="#1E4DCB"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:background="@drawable/bg_summary_blue" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+                android:text="-8점\n목표까지"
+                android:textColor="#E58A00"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:background="@drawable/bg_summary_yellow" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>

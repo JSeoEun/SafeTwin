@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F3F6FB">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="안전 분석"
+            android:textColor="#0B1736"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="현장 사진 업로드 및 AI 위험 탐지"
+            android:textColor="#7A8AA0"
+            android:textSize="14sp"
+            android:layout_marginTop="4dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="36dp"
+            android:layout_marginTop="16dp"
+            android:gravity="center"
+            android:paddingStart="14dp"
+            android:paddingEnd="14dp"
+            android:text="고위험 분석 결과"
+            android:textColor="#D93025"
+            android:textSize="13sp"
+            android:textStyle="bold"
+            android:background="@drawable/bg_danger_badge" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="18dp"
+            android:background="@drawable/card_bg"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="분석된 현장 사진 · 1동 창고"
+                android:textColor="#0B1736"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="230dp"
+                android:layout_marginTop="14dp" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="28dp"
+                    android:layout_margin="10dp"
+                    android:gravity="center"
+                    android:paddingStart="10dp"
+                    android:paddingEnd="10dp"
+                    android:text="영상 시뮬레이션"
+                    android:textColor="#FFFFFF"
+                    android:textSize="11sp" />
+
+                <View
+                    android:layout_width="100dp"
+                    android:layout_height="85dp"
+                    android:layout_gravity="bottom|start"
+                    android:layout_marginStart="26dp"
+                    android:layout_marginBottom="78dp"
+                    android:background="#6F89A5" />
+
+                <View
+                    android:layout_width="80dp"
+                    android:layout_height="55dp"
+                    android:layout_gravity="bottom|center_horizontal"
+                    android:layout_marginBottom="78dp"
+                    android:background="#91A8BE" />
+
+                <View
+                    android:layout_width="90dp"
+                    android:layout_height="120dp"
+                    android:layout_gravity="bottom|end"
+                    android:layout_marginEnd="28dp"
+                    android:layout_marginBottom="78dp"
+                    android:background="#7894AF" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="92dp"
+                    android:layout_gravity="bottom"
+                    android:background="#8FA6BC" />
+
+                <TextView
+                    android:layout_width="26dp"
+                    android:layout_height="26dp"
+                    android:layout_marginStart="62dp"
+                    android:layout_marginTop="82dp"
+                    android:gravity="center"
+                    android:text="1"
+                    android:textColor="#FFFFFF"
+                    android:textSize="12sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="26dp"
+                    android:layout_height="26dp"
+                    android:layout_gravity="end"
+                    android:layout_marginTop="132dp"
+                    android:layout_marginEnd="120dp"
+                    android:gravity="center"
+                    android:text="2"
+                    android:textColor="#FFFFFF"
+                    android:textSize="12sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="26dp"
+                    android:layout_height="26dp"
+                    android:layout_gravity="end"
+                    android:layout_marginTop="54dp"
+                    android:layout_marginEnd="54dp"
+                    android:gravity="center"
+                    android:text="3"
+                    android:textColor="#FFFFFF"
+                    android:textSize="12sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="26dp"
+                    android:layout_height="26dp"
+                    android:layout_marginStart="160dp"
+                    android:layout_marginTop="176dp"
+                    android:gravity="center"
+                    android:text="4"
+                    android:textColor="#FFFFFF"
+                    android:textSize="12sp"
+                    android:textStyle="bold" />
+            </FrameLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="14dp"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="종합 위험 점수"
+                android:textColor="#0B1736"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="48 / 100"
+                android:textColor="#D93025"
+                android:textSize="28sp"
+                android:textStyle="bold"
+                android:layout_marginTop="8dp" />
+
+            <ProgressBar
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="match_parent"
+                android:layout_height="8dp"
+                android:layout_marginTop="10dp"
+                android:progress="48"
+                android:max="100"
+                android:progressDrawable="@drawable/progress_danger" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="탐지된 위험 요소 4건"
+            android:textColor="#0B1736"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_marginTop="18dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:padding="16dp"
+            android:text="1  보호구 미착용\n3명의 작업자가 안전모를 착용하지 않음\n산업법 제32조 · 조치: 작업 중지 후 착용 지시"
+            android:textColor="#26364D"
+            android:textSize="14sp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:padding="16dp"
+            android:text="2  적재물 불안정\n자재 적치 높이 2.1m 초과, 전도 위험\n산업법 제38조 · 조치: 1.8m 이하 즉시 재정리"
+            android:textColor="#26364D"
+            android:textSize="14sp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:padding="16dp"
+            android:text="3  통로 폭 미확보\n주요 통로 폭 0.8m — 기준 1m 미달\n안전보건규칙 제24조"
+            android:textColor="#26364D"
+            android:textSize="14sp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:padding="16dp"
+            android:text="4  정리정돈 미흡\n작업 구역 내 폐기물 방치 — 넘어짐 사고 원인 23%"
+            android:textColor="#26364D"
+            android:textSize="14sp" />
+
+    </LinearLayout>
+</ScrollView>

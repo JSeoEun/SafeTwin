@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F3F6FB">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <!-- 제목 -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="탑뷰 시각화"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:textColor="#0B1736"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="인터랙티브 현장 도면"
+            android:textSize="14sp"
+            android:textColor="#7A8AA0"
+            android:layout_marginTop="4dp"/>
+
+        <!-- 메인 카드 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="18dp"
+            android:orientation="vertical"
+            android:background="@drawable/card_bg"
+            android:padding="16dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="인터랙티브 탑뷰 도면"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="#0B1736"/>
+
+            <!-- 도면 영역 -->
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="260dp"
+                android:layout_marginTop="14dp"
+                android:background="#EEF2F7">
+
+                <!-- 위험 구역 (빨강) -->
+                <TextView
+                    android:layout_width="120dp"
+                    android:layout_height="90dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="20dp"
+                    android:gravity="center"
+                    android:text="1동 창고\n위험"
+                    android:textSize="12sp"
+                    android:textColor="#D93025"
+                    android:background="@drawable/bg_zone_danger"/>
+
+                <!-- 주의 구역 -->
+                <TextView
+                    android:layout_width="120dp"
+                    android:layout_height="80dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="130dp"
+                    android:gravity="center"
+                    android:text="야적장 A구역\n주의"
+                    android:textSize="12sp"
+                    android:textColor="#E58A00"
+                    android:background="@drawable/bg_zone_warning"/>
+
+                <!-- 안전 구역 -->
+                <TextView
+                    android:layout_width="110dp"
+                    android:layout_height="80dp"
+                    android:layout_gravity="end"
+                    android:layout_marginEnd="20dp"
+                    android:layout_marginTop="30dp"
+                    android:gravity="center"
+                    android:text="2동 작업장\n양호"
+                    android:textSize="12sp"
+                    android:textColor="#008A3D"
+                    android:background="@drawable/bg_zone_safe"/>
+
+                <TextView
+                    android:layout_width="90dp"
+                    android:layout_height="70dp"
+                    android:layout_gravity="end|bottom"
+                    android:layout_marginEnd="20dp"
+                    android:layout_marginBottom="20dp"
+                    android:gravity="center"
+                    android:text="출입구\n양호"
+                    android:textSize="12sp"
+                    android:textColor="#008A3D"
+                    android:background="@drawable/bg_zone_safe"/>
+
+            </FrameLayout>
+
+        </LinearLayout>
+
+        <!-- 구역 현황 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="18dp"
+            android:orientation="vertical"
+            android:background="@drawable/card_bg"
+            android:padding="16dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="구역 현황"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="#0B1736"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="■ 고위험 구역 1개"
+                android:textColor="#D93025"
+                android:layout_marginTop="10dp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="■ 주의 구역 1개"
+                android:textColor="#E58A00"
+                android:layout_marginTop="4dp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="■ 양호 구역 3개"
+                android:textColor="#008A3D"
+                android:layout_marginTop="4dp"/>
+
+        </LinearLayout>
+
+        <!-- 상세 정보 카드 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="18dp"
+            android:orientation="vertical"
+            android:background="@drawable/card_bg"
+            android:padding="16dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="1동 창고"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="#0B1736"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="고위험"
+                android:textColor="#D93025"
+                android:layout_marginTop="4dp"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="면적: 약 222㎡"
+                android:layout_marginTop="10dp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="작업자: 2명"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="위험 요소: 5개"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="최근 점검: 05.01"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="12dp"
+                android:gravity="center"
+                android:text="즉시 개선 필요"
+                android:textColor="#D93025"
+                android:textStyle="bold"
+                android:background="@drawable/bg_warning_button"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>
