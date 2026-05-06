@@ -1,0 +1,26 @@
+### Android Studio & IntelliJ ###
+*.iml
+.gradle
+/.idea/caches
+/.idea/libraries
+/.idea/modules.xml
+/.idea/workspace.xml
+/.idea/navEditor.xml
+/.idea/assetWizardSettings.xml
+
+### Build Output ###
+/build
+/captures
+.externalNativeBuild
+.cxx
+
+### Local Configs & Secrets ###
+local.properties
+/local.properties
+
+### OS Specific ###
+.DS_Store
+
+###CLAUDE관련###
+CLAUDE.md
+COMPOSE_REFACTORING_GUIDE.md
