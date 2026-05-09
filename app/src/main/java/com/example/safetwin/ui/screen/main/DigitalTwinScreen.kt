@@ -40,9 +40,11 @@ import androidx.lifecycle.viewmodel.compose.viewModel
 import com.example.safetwin.data.model.ZoneDetailResponse
 import com.example.safetwin.data.model.ZoneResponse
 import com.example.safetwin.ui.component.DashboardCard
+import androidx.compose.ui.tooling.preview.Preview
 import com.example.safetwin.ui.theme.DangerRed
 import com.example.safetwin.ui.theme.Primary
 import com.example.safetwin.ui.theme.SafeGreen
+import com.example.safetwin.ui.theme.SafeTwinTheme
 import com.example.safetwin.ui.theme.WarningOrange
 
 @Composable
@@ -271,4 +273,12 @@ private fun riskLevelKo(level: String?): String = when (level) {
     "HIGH"     -> "위험"
     "CRITICAL" -> "고위험"
     else       -> "양호"
+}
+
+@Preview(showBackground = true, name = "탑뷰 시각화")
+@Composable
+private fun DigitalTwinScreenPreview() {
+    SafeTwinTheme {
+        DigitalTwinScreen(vm = DigitalTwinViewModel())
+    }
 }

@@ -28,8 +28,11 @@ import androidx.compose.ui.unit.sp
 import androidx.lifecycle.viewmodel.compose.viewModel
 import androidx.navigation.NavHostController
 import com.example.safetwin.navigation.NavRoutes
+import androidx.compose.ui.tooling.preview.Preview
+import androidx.navigation.compose.rememberNavController
 import com.example.safetwin.ui.component.LabeledTextField
 import com.example.safetwin.ui.component.PrimaryButton
+import com.example.safetwin.ui.theme.SafeTwinTheme
 
 @Composable
 fun LoginScreen(
@@ -166,5 +169,13 @@ fun LoginScreen(
         }
 
         Spacer(Modifier.height(40.dp))
+    }
+}
+
+@Preview(showBackground = true, name = "로그인")
+@Composable
+private fun LoginScreenPreview() {
+    SafeTwinTheme {
+        LoginScreen(navController = rememberNavController(), vm = LoginViewModel())
     }
 }

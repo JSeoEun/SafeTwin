@@ -44,8 +44,10 @@ import androidx.lifecycle.viewmodel.compose.viewModel
 import com.example.safetwin.data.model.DocResponse
 import com.example.safetwin.ui.component.DashboardCard
 import com.example.safetwin.ui.component.PrimaryButton
+import androidx.compose.ui.tooling.preview.Preview
 import com.example.safetwin.ui.theme.DangerRed
 import com.example.safetwin.ui.theme.Primary
+import com.example.safetwin.ui.theme.SafeTwinTheme
 
 @Composable
 fun LegalScreen(vm: LegalViewModel = viewModel()) {
@@ -318,4 +320,12 @@ private fun docTypeKo(type: String): String = when (type) {
     "INSPECTION_REPORT" -> "점검 보고서"
     "GROUP_PHOTO"       -> "단체 사진"
     else                -> type
+}
+
+@Preview(showBackground = true, name = "법적 증빙")
+@Composable
+private fun LegalScreenPreview() {
+    SafeTwinTheme {
+        LegalScreen(vm = LegalViewModel())
+    }
 }

@@ -45,8 +45,10 @@ import com.example.safetwin.data.model.AnalysisResponse
 import com.example.safetwin.ui.component.BadgeStatus
 import com.example.safetwin.ui.component.DashboardCard
 import com.example.safetwin.ui.component.StatusBadge
+import androidx.compose.ui.tooling.preview.Preview
 import com.example.safetwin.ui.theme.DangerRed
 import com.example.safetwin.ui.theme.Primary
+import com.example.safetwin.ui.theme.SafeTwinTheme
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 
@@ -344,4 +346,12 @@ private fun riskLevelKo(level: String?): String = when (level) {
     "HIGH"     -> "위험"
     "CRITICAL" -> "고위험"
     else       -> level ?: "-"
+}
+
+@Preview(showBackground = true, name = "안전 분석")
+@Composable
+private fun AnalysisScreenPreview() {
+    SafeTwinTheme {
+        AnalysisScreen(vm = AnalysisViewModel())
+    }
 }

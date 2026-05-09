@@ -41,7 +41,9 @@ import com.example.safetwin.data.local.TokenManager
 import com.example.safetwin.data.model.LogoutRequest
 import com.example.safetwin.data.network.ApiClient
 import com.example.safetwin.navigation.NavRoutes
+import androidx.compose.ui.tooling.preview.Preview
 import com.example.safetwin.ui.theme.Primary
+import com.example.safetwin.ui.theme.SafeTwinTheme
 import kotlinx.coroutines.launch
 
 private data class DrawerMenuItem(val label: String, val route: String)
@@ -190,6 +192,18 @@ private fun AppDrawerContent(
         ) {
             Text(text = "로그아웃", fontSize = 16.sp, color = Color(0xFF666666))
         }
+    }
+}
+
+@Preview(showBackground = true, name = "드로어 메뉴")
+@Composable
+private fun DrawerPreview() {
+    SafeTwinTheme {
+        AppDrawerContent(
+            currentRoute = NavRoutes.Main.DASHBOARD,
+            onNavigate = {},
+            onLogout = {},
+        )
     }
 }
 

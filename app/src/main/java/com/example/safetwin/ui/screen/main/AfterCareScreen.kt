@@ -36,9 +36,11 @@ import androidx.lifecycle.viewmodel.compose.viewModel
 import com.example.safetwin.data.model.CompareResponse
 import com.example.safetwin.data.model.ScoreTrendResponse
 import com.example.safetwin.ui.component.DashboardCard
+import androidx.compose.ui.tooling.preview.Preview
 import com.example.safetwin.ui.theme.DangerRed
 import com.example.safetwin.ui.theme.Primary
 import com.example.safetwin.ui.theme.SafeGreen
+import com.example.safetwin.ui.theme.SafeTwinTheme
 
 @Composable
 fun AfterCareScreen(vm: AfterCareViewModel = viewModel()) {
@@ -326,5 +328,13 @@ private fun SummaryBox(label: String, textColor: Color, bgColor: Color, modifier
             color = textColor, textAlign = TextAlign.Center,
             lineHeight = 26.sp,
         )
+    }
+}
+
+@Preview(showBackground = true, name = "통계 & 사후관리")
+@Composable
+private fun AfterCareScreenPreview() {
+    SafeTwinTheme {
+        AfterCareScreen(vm = AfterCareViewModel())
     }
 }

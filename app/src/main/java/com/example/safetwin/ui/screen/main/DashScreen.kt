@@ -24,9 +24,12 @@ import androidx.compose.ui.unit.sp
 import androidx.lifecycle.viewmodel.compose.viewModel
 import com.example.safetwin.data.model.DashboardSummary
 import com.example.safetwin.ui.component.DashboardCard
+import androidx.compose.ui.tooling.preview.Preview
+import com.example.safetwin.data.model.RecentAnalysis
 import com.example.safetwin.ui.theme.DangerRed
 import com.example.safetwin.ui.theme.Primary
 import com.example.safetwin.ui.theme.SafeGreen
+import com.example.safetwin.ui.theme.SafeTwinTheme
 
 @Composable
 fun DashScreen(vm: DashboardViewModel = viewModel()) {
@@ -202,4 +205,27 @@ private fun AnalysisRecord(header: String, detail: String) {
         modifier = Modifier.fillMaxWidth(),
     )
     Text(text = detail, fontSize = 13.sp, color = Color(0xFF26364D))
+}
+
+@Preview(showBackground = true, name = "대시보드 - 데이터")
+@Composable
+private fun DashScreenPreview() {
+    SafeTwinTheme {
+        DashContent(
+            DashboardSummary(
+                safetyScore = 82.5,
+                safetyScoreDelta = 3.2,
+                weeklyRiskCount = 7,
+                weeklyRiskDelta = -2,
+                unresolvedCount = 3,
+                educationRate = 0.88,
+                safetyGrade = "B+",
+                tbmGuide = "오늘은 고소 작업 시 안전벨트 착용을 반드시 확인하세요.",
+                recentAnalyses = listOf(
+                    RecentAnalysis(1L, null, "A동 3층", "COMPLETED", 85, "LOW", "2025-05-08"),
+                    RecentAnalysis(2L, null, "B동 용접실", "COMPLETED", 62, "MEDIUM", "2025-05-06"),
+                ),
+            )
+        )
+    }
 }

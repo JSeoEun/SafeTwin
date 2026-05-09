@@ -35,9 +35,12 @@ import androidx.compose.ui.unit.sp
 import androidx.lifecycle.viewmodel.compose.viewModel
 import androidx.navigation.NavHostController
 import com.example.safetwin.navigation.NavRoutes
+import androidx.compose.ui.tooling.preview.Preview
+import androidx.navigation.compose.rememberNavController
 import com.example.safetwin.ui.component.LabeledTextField
 import com.example.safetwin.ui.component.PrimaryButton
 import com.example.safetwin.ui.theme.SafeGreen
+import com.example.safetwin.ui.theme.SafeTwinTheme
 
 @Composable
 fun SignUpScreen(
@@ -279,5 +282,13 @@ fun SignUpScreen(
         }
 
         Spacer(Modifier.height(40.dp))
+    }
+}
+
+@Preview(showBackground = true, name = "회원가입")
+@Composable
+private fun SignUpScreenPreview() {
+    SafeTwinTheme {
+        SignUpScreen(navController = rememberNavController(), vm = SignUpViewModel())
     }
 }
