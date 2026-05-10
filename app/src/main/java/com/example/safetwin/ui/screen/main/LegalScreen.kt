@@ -48,6 +48,7 @@ import androidx.compose.ui.tooling.preview.Preview
 import com.example.safetwin.ui.theme.DangerRed
 import com.example.safetwin.ui.theme.Primary
 import com.example.safetwin.ui.theme.SafeTwinTheme
+import androidx.compose.foundation.layout.RowScope
 
 @Composable
 fun LegalScreen(vm: LegalViewModel = viewModel()) {
@@ -305,7 +306,7 @@ private fun DocumentRow(doc: DocResponse, onDownload: () -> Unit) {
 }
 
 @Composable
-private fun TableHeader(text: String, weight: Float) {
+private fun RowScope.TableHeader(text: String, weight: Float) {
     Text(
         text = text,
         modifier = Modifier.weight(weight),

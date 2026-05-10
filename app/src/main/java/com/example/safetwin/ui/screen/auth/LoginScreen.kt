@@ -152,6 +152,19 @@ fun LoginScreen(
             )
         }
 
+        // 테스트용 바로 입장
+        Spacer(Modifier.height(16.dp))
+        Text(
+            text = "테스트 입장 (백엔드 없이)",
+            color = Color(0xFF9E9E9E),
+            fontSize = 12.sp,
+            modifier = Modifier.clickable {
+                navController.navigate(NavRoutes.MAIN) {
+                    popUpTo(NavRoutes.LOGIN) { inclusive = true }
+                }
+            },
+        )
+
         // 하단 회원가입 링크
         Spacer(Modifier.height(24.dp))
         Row(

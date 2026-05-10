@@ -1,0 +1,8 @@
+{
+  "permissions": {
+    "allow": [
+      "WebFetch(domain:maven.google.com)",
+      "WebSearch"
+    ]
+  }
+}
