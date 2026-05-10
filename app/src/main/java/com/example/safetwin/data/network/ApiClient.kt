@@ -12,7 +12,7 @@ import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 
 object ApiClient {
-    private const val BASE_URL = "http://114.205.188.138:8080/"
+    private const val BASE_URL = "http://43.201.54.74:8080/"
 
     private val tokenInterceptor = Interceptor { chain ->
         val token = TokenManager.getAccessToken()
